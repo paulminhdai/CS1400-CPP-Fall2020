@@ -1,3 +1,10 @@
+/*
+who: Dai (Paul) Vuong
+what: CS1400.02
+when: Nov 1st, 2020
+why: Project 2 - Data Structures 
+*/
+
 public class ArrayQueue {
 
     private int[] store;
