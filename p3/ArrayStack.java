@@ -8,7 +8,7 @@ why: Project 2 - Data Structures
 public class ArrayStack {
 
     private int top;
-    private int[] store;
+    private char[] store;
     private final int INIT_SIZE = 10;
 
     /**
@@ -16,7 +16,7 @@ public class ArrayStack {
      */
     public ArrayStack() {
         top = 0;
-        store = new int[INIT_SIZE];
+        store = new char[INIT_SIZE];
     }
 
     /**
@@ -27,10 +27,10 @@ public class ArrayStack {
     public ArrayStack(int size) {
         if (size < 1) {
             System.out.println("The size must be positive. Created a stack with size of " + INIT_SIZE);
-            store = new int[INIT_SIZE];
+            store = new char[INIT_SIZE];
         } 
         else
-            store = new int[size];
+            store = new char[size];
         
         top = 0;  
     }
@@ -38,7 +38,7 @@ public class ArrayStack {
     /** Adds a new entry to the top of this stack.
      * @param newEntry An int to be added to the stack.
      */
-    public void push(int newEntry) {
+    public void push(char newEntry) {
         if (top >= store.length)
             resize();
 
@@ -48,8 +48,8 @@ public class ArrayStack {
 
     /** Resize the list when it gets full. The new list has double size.*/
     private void resize() {
-        int[] temp = store;
-        store = new int[temp.length*2];
+        char[] temp = store;
+        store = new char[temp.length*2];
 
         for (int i = 0; i < top; i++)
             store[i] = temp[i];
@@ -89,7 +89,7 @@ public class ArrayStack {
 
     /** Removes all entries from this stack.*/
     public void clear() {
-        store = new int [top];
+        store = new char[top];
         top = 0;
     }
 }

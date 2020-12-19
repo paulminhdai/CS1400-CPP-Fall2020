@@ -11,26 +11,27 @@ public class ArrayQueue {
     private int counter;
     private int front;
     private int back;
+    private final int INIT_SIZE = 10;
     
     /**
-     * Initializes an empty queue with size of 10
+     * Initializes an empty queue with size of INIT_SIZE.
      */
     public ArrayQueue() {
         counter = 0;
         front = 0;
         back = 0;
-        store = new int[10];
+        store = new int[INIT_SIZE];
     }
 
     /**
      * Initializes an empty queue with size of choice.
-     * If the size is less than 1, initializes an empty queue with size of 10.
+     * If the size is less than 1, initializes an empty queue with size of INIT_SIZE.
      * @param size Size of the queue.
      */
     public ArrayQueue(int size) {
         if (size < 1){
-            System.out.println("The size must be positive. Created a queue of size 10.");
-            store = new int[10];
+            System.out.println("The size must be positive. Created a queue with the size of " + INIT_SIZE);
+            store = new int[INIT_SIZE];
         } 
         else
             store = new int[size];
